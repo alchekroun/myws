@@ -1,12 +1,12 @@
+import React from 'react';
+import '../styles/Banner.css';
+
 const Banner = () => {
-    return (
-        <div>
-            <header>
-                <h1>Hello I'm Alexandre</h1>
-                <h2>Here is my projects</h2>
-            </header>
-        </div>
-    )
+  return (
+    <header className="header">
+      <div className="banner">Alchekroun</div>
+    </header>
+  )
 }
 
 export default Banner

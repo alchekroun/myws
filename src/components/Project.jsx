@@ -1,20 +1,17 @@
-import { Card, CardActions, CardContent, CardMedia } from "@mui/material"
+import React from 'react';
+import '../styles/Project.css';
 import githubLogo from '../assets/github-mark.svg';
 
-const Project = ({projectName, gitHubURL}) => {
-    return (
-        <Card>
-            <CardMedia/>
-            <CardContent>
-                <h2>{projectName}</h2>
-            </CardContent>
-            <CardActions>
-                <a href={gitHubURL} target="_blank">
-                    <img src={githubLogo} className="logo" alt="GitHub Logo" />
-                </a>
-            </CardActions>
-        </Card>
-    )
+function Project({ title, description, githubLink }) {
+  return (
+    <div className="card">
+      <h2 className="title">{title}</h2>
+      <p className="description">{description}</p>
+      <a href={githubLink} target="_blank" rel="noopener noreferrer" className="github-link">
+        <img src={githubLogo} alt="GitHub Logo" className="github-logo" />
+      </a>
+    </div>
+  );
 }
 
-export default Project
+export default Project;
