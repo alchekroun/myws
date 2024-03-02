@@ -1,33 +1,39 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/App.css'
+import Banner from './components/Banner'
+import Project from './components/Project'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // Should not do it this way because I would like to upgrade and customize each descriptions individually.
+  // To give up in next version
+  const projects = [
+    {
+      "title": "BrokerApp",
+      "description": "Developed a broker working on a web server using C++ >11, ASIO library, STL algorithms and Catch2 test framework. Implementation of share allocation management following the CME Group standard.",
+      "link": "https://github.com/alchekroun/BrokerApp"
+    },
+    {
+      "title": "GetGreeks",
+      "description": "Conceived an application to offer risk coverage with the Greeks of the Black Scholes model.",
+      "link": "https://github.com/alchekroun/getGreeks"
+    }
+  ]
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Banner />
+      <div className="container">
+
+        {projects.map((project) => (
+          <Project
+            key={project.title}
+            title={project.title}
+            description={project.description}
+            githubLink={project.githubLink}
+          />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
