@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './styles/App.css'
 import Banner from './components/Banner'
 import Project from './components/Project'
+import { Grid } from '@mui/material'
 
 function App() {
 
@@ -17,23 +18,39 @@ function App() {
       "title": "GetGreeks",
       "description": "Conceived an application to offer risk coverage with the Greeks of the Black Scholes model.",
       "link": "https://github.com/alchekroun/getGreeks"
+    },
+    {
+      "title": "Snek",
+      "description": "First game in C++ 11",
+      "link": "https://github.com/alchekroun/snek"
+    },
+    {
+      "title": "GameOfLife",
+      "description": "Recreated Conway's Game Of Life. Using C++. I separated the GUI from the Logic, the logic is calculating generations in one thread and send it to the GUI that read and display them in another thread.",
+      "link": "https://github.com/alchekroun/GameOfLife"
     }
   ]
 
   return (
     <>
       <Banner />
-      <div className="container">
-
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        className="container"
+      >
         {projects.map((project) => (
           <Project
+            item
             key={project.title}
             title={project.title}
             description={project.description}
-            githubLink={project.githubLink}
+            githubLink={project.link}
           />
         ))}
-      </div>
+      </Grid>
     </>
   )
 }

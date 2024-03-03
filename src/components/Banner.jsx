@@ -4,7 +4,7 @@ import '../styles/Banner.css';
 const Banner = () => {
   return (
     <header className="header">
-      <div className="banner">Alchekroun</div>
+      <div className="banner"><p>I'm Alexandre Chekroun. Here is my projects.</p></div>
     </header>
   )
 }
