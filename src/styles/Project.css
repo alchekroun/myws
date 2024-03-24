@@ -4,10 +4,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 10px;
-  margin: 10px;
+  margin: 10px auto;
   max-width: 600px;
   width: 100%;
-  height: 200px;
+  height: 250px;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -15,18 +15,17 @@
 
 .project h2 {
   font-size: 24px;
-  margin: 5px;
   color: #000;
 }
 
 .project p {
-  font-size: 16px;
-  margin: 5px;
+  font-size: 20px;
   color: #000;
 }
 
 .project .fadeText {
   color: #fff;
+  -webkit-text-stroke: 0.5px #ccc; /* Add a 1px black border around the text (for Webkit browsers) */
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
