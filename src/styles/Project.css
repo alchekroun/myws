@@ -1,22 +1,38 @@
-.card {
+.project {
   background-color: #ccc;
+  border: 2px solid #000;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px auto;
   max-width: 600px;
   width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
-.title {
+.project h2 {
   font-size: 24px;
-  margin-bottom: 10px;
   color: #000;
 }
 
-.description {
-  font-size: 16px;
+.project p {
+  font-size: 20px;
   color: #000;
+}
+
+.project .fadeText {
+  color: #fff;
+  -webkit-text-stroke: 0.5px #ccc; /* Add a 1px black border around the text (for Webkit browsers) */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.project:hover .fadeText {
+  opacity: 1;
 }
 
 .github-link {
