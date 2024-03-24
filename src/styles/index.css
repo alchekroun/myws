@@ -27,7 +27,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background-image: url("public/bg_image.jpg");
+  background-image: url("bg_image.jpg");
   background-repeat: no-repeat;
   background-size: auto;
 }
